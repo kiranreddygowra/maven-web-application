@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://15.206.79.115:9000/</sonar.host.url>
+		<sonar.host.url>http://172.31.36.35:9000/</sonar.host.url>
 		<sonar.login>8307807c33ac4f6535f0915cb286e86f358c270b</sonar.login>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Akhanda Releases Nexus Repository</name>
-	      <url>http://65.0.4.215:8081/repository/Akhanda-release/</url>
+	      <url>http://172.31.35.211:8081/repository/Akhanda-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Akhanda Snapshot Nexus Repository </name>
-	      <url>http://65.0.4.215:8081/repository/Akhanda-snapshot/</url>
+	      <url>http://172.31.35.211:8081/repository/Akhanda-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
