@@ -1,4 +1,4 @@
-@Library('msssharedlibs') _
+@Library('girishsharedlibs') _
 
 pipeline{
 
@@ -31,7 +31,7 @@ stages{
 
 stage('CheckOutCode'){
 steps{
-slackNotifications('STARTED')
+sendSlackNotifications('STARTED')
 git branch: "${params.BranchName}", credentialsId: '88ac761b-eefd-4a3d-94b0-c0469dddd23f', url: 'https://github.com/kiranreddygowra/maven-web-application.git'
 }
 }
@@ -69,10 +69,10 @@ sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@17
 
 post {
   success {
-    slackNotifications(currentBuild.result)
+    sendSlackNotifications(currentBuild.result)
   }
   failure {
-    slackNotifications(currentBuild.result)
+    sendSlackNotifications(currentBuild.result)
   }
 }
 }//pipeline closing
