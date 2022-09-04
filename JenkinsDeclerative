@@ -1,4 +1,4 @@
-@Library('girishsharedlibs') _
+@Library('msssharedlibs') _
 
 pipeline{
 
@@ -11,7 +11,7 @@ options {
 }
 
 triggers {
-  pollSCM('* * * * *')
+  //pollSCM('* * * * *')
   //cron ('* * * * *')
 }
 
