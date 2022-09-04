@@ -38,6 +38,7 @@ sh "mvn clean package"
 }
 }
 
+/*
 //This Stage will be execute SonarQube Report
 stage('ExecuteSonarQubeReport'){
 steps{
@@ -59,6 +60,7 @@ sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@17
 }
 }
 
+*/
 }//stages closing
 
 post {
@@ -71,7 +73,7 @@ post {
 }
 }//pipeline closing
 
-
+/*
 //Code Snippet for sending slack notifications.
 
 def slackNotifications(String buildStatus = 'STARTED') {
@@ -99,3 +101,5 @@ def slackNotifications(String buildStatus = 'STARTED') {
   // Send notifications
   slackSend (color: colorCode, message: summary, channel: "#testproject")
 }
+
+*/
