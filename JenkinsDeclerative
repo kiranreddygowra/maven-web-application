@@ -1,3 +1,5 @@
+@Library('girishsharedlibs') _
+
 pipeline{
 
 agent any
