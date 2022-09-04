@@ -18,8 +18,11 @@ tools{
 maven 'maven-3.8.6'
 }
 
-properties([parameters([choice(choices: ['master', 'development', 'uat', 'test', 'stage'], description: 'select the Branch Name', name: 'BranchName'), string(defaultValue: 'Girsh Reddy', description: 'Give the name parameter value', name: 'Name')])])
-
+parameters
+{
+choice(choices: ['master', 'development', 'uat', 'test', 'stage'], description: 'select the Branch Name', name: 'BranchName') 
+string(defaultValue: 'Girsh Reddy', description: 'Give the name parameter value', name: 'Name')
+}
 stages{
 
 stage('CheckOutCode'){
