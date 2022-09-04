@@ -18,12 +18,14 @@ tools{
 maven 'maven-3.8.6'
 }
 
+properties([parameters([choice(choices: ['master', 'development', 'uat', 'test', 'stage'], description: 'select the Branch Name', name: 'BranchName'), string(defaultValue: 'Girsh Reddy', description: 'Give the name parameter value', name: 'Name')])])
+
 stages{
 
 stage('CheckOutCode'){
 steps{
 slackNotifications('STARTED')
-git branch: 'development', credentialsId: '88ac761b-eefd-4a3d-94b0-c0469dddd23f', url: 'https://github.com/kiranreddygowra/maven-web-application.git'
+git branch: "${params.BranchName}", credentialsId: '88ac761b-eefd-4a3d-94b0-c0469dddd23f', url: 'https://github.com/kiranreddygowra/maven-web-application.git'
 }
 }
 
